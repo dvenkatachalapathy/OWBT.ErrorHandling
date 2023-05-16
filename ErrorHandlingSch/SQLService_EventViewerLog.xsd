@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://OWBT.ErrorHandling/EventViewerLog" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:appinfo>
+      <msbtssql:sqlScript value="exec [EventViewerInsert] @EventCategory=&quot; &quot;, @EventDateTime=&quot; &quot;, @EventLevel=&quot; &quot;, @EventMachineName=&quot; &quot;, @EventMessage=&quot; &quot;, @EventSource=&quot; &quot;" xmlns:msbtssql="http://schemas.microsoft.com/BizTalk/2003" />
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ErrorHandling">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="EventViewerInsert">
+          <xs:complexType>
+            <xs:attribute name="EventCategory" type="xs:string" />
+            <xs:attribute name="EventDateTime" type="xs:string" />
+            <xs:attribute name="EventLevel" type="xs:string" />
+            <xs:attribute name="EventMachineName" type="xs:string" />
+            <xs:attribute name="EventMessage" type="xs:string" />
+            <xs:attribute name="EventSource" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResponseErrorHandling">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Success" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
